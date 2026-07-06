@@ -1,0 +1,41 @@
+{
+  "name": "@continuewith/sdk",
+  "version": "0.1.3",
+  "description": "ContinueWith prompt helpers and install snippets for the AI-native Web layer",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "pnpm build && node --test test/*.test.mjs",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "keywords": [
+    "continuewith",
+    "ai",
+    "widget",
+    "prompts"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/continuewith-ai/sdk.git"
+  },
+  "homepage": "https://continuewith.ai/docs",
+  "bugs": {
+    "url": "https://github.com/continuewith-ai/sdk/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
